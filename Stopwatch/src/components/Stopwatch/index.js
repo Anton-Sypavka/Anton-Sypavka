@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 
-import {interval, Subject, from, Observable,} from "rxjs";
-import { takeUntil, debounce, create, share} from "rxjs/operators";
+import { interval, Subject, fromEvent } from "rxjs";
+import { takeUntil, buffer, throttleTime, filter } from "rxjs/operators";
 
 import './styles.scss';
 
@@ -24,6 +24,20 @@ const Stopwatch = () => {
         }
     }, [status]);
 
+    useEffect( () => {
+        const waitBtn = document.querySelector('.wait-btn');
+        let clicks$ = fromEvent(waitBtn, 'click');
+
+        clicks$
+            .pipe(
+                buffer(clicks$.pipe(throttleTime(300))),
+                filter(clickArray => clickArray.length === 2)
+            )
+            .subscribe( () => {
+                setStatus(!status);
+            })
+    }, [status])
+
     const start = () => {
         setStatus(!status)
     }
@@ -37,10 +51,6 @@ const Stopwatch = () => {
         setSec(0)
     }
 
-    const wait = () => {
-        setStatus(!status)
-    }
-
     return (
         <div className='container'>
             <span> {new Date(sec).toISOString().slice(11, 19)}</span>
@@ -50,7 +60,7 @@ const Stopwatch = () => {
                     : <button onClick={start}>Start</button>
                 }
                 <button onClick={reset}>Reset</button>
-                <button onClick={wait}>Wait</button>
+                <button className='wait-btn' >Wait</button>
             </div>
         </div>
     )
