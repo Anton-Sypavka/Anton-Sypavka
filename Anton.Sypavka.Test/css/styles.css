@@ -1,0 +1,31 @@
+.container {
+    background-color: #f4f4f4;
+}
+
+/*Styles for header section*/
+
+.header {
+    background-color: #ffffff;
+    padding: 10px 35px;
+
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+.nav-bar i {
+    color: #bbbbbb;
+    font-size: 34px;
+}
+
+.nav-bar-list li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+/*Styles for main section*/
+
