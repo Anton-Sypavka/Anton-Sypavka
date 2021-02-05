@@ -1,12 +1,13 @@
 .container {
     background-color: #f4f4f4;
+    font-family: "Open Sans";
 }
 
 /*Styles for header section*/
 
-.header {
+.header-section {
     background-color: #ffffff;
-    padding: 10px 35px;
+    padding: 10px 35px 10px 130px;
 
 }
 
@@ -14,7 +15,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100px;
+    height: 50px;
 }
 
 .nav-bar i {
@@ -29,3 +30,133 @@
 
 /*Styles for main section*/
 
+.main-section {
+    padding: 50px 35px 50px 130px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.activity-block, .vehicles-block {
+    height: 1000px;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.activity-block {
+    width: 550px;
+}
+
+.activity-block-header, .vehicles-block-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    font-weight: bold;
+    border-bottom: 1px solid #fbfbfb;
+}
+
+.vehicles-block-header li{
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.vehicles-block-header li:hover{
+    color: #616a76;
+    cursor: pointer;
+}
+
+.vehicles-block {
+    width: 800px;
+}
+
+/*Styles for sidebar section*/
+
+/*Default sidebar*/
+
+.side-menu-default {
+    position: absolute;
+    top: 0;
+    background-color: #3b4957;
+    width: 100px;
+    height: 1170px;
+}
+
+.disabled {
+    display: none;
+}
+
+.side-menu-default-header {
+    text-align: center;
+    padding: 30px;
+}
+
+.side-menu-default-header a {
+    color: #616a76;
+    font-size: 34px;
+}
+
+.side-menu-default-header:hover a {
+    color: #ffffff;
+    font-size: 34px;
+}
+
+.side-menu-default-categories {
+    text-align: center;
+    padding: 30px;
+}
+
+.side-menu-default-categories i {
+    color: #616a78;
+    text-decoration: none;
+}
+
+.side-menu-default-categories li {
+    padding: 20px 0;
+}
+
+
+/*Active side bar*/
+.side-menu-active {
+    position: absolute;
+    top: 0;
+    background-color: #3b4957;
+    height: 1170px;
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.side-menu-header {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.logo img{
+    width: 200px;
+}
+
+.button-close i {
+    font-size: 34px;
+    color: #616a76;
+    margin-left: 10px;
+}
+
+.button-close:hover i {
+    color: #ffffff;
+}
+
+.side-menu-categories {
+    padding: 30px;
+}
+
+.side-menu-categories a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.side-menu-categories li {
+    padding: 20px 0;
+}

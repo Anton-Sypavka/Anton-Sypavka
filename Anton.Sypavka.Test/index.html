@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Anton Sypavka Test Task</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/7419c5d7b9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
+
 </head>
 <body>
 <div class="container">
 <!--    Header section    -->
-    <header class="header">
+    <header class="header-section">
         <div class="nav-bar">
             <div class="search-icon">
                 <i class="fas fa-search-location"></i>
@@ -33,16 +35,67 @@
 
 <!--    Main section    -->
     <main class="main-section">
-        <div clas="activity-block">
-
+        <div class="activity-block">
+            <div class="activity-block-header">
+                <p>Activity</p>
+                <p>All Updates</p>
+            </div>
         </div>
         <div class="vehicles-block">
-
+            <div class="vehicles-block-header">
+                <p>Vehicles</p>
+                <ul>
+                    <li><i class="fas fa-bars"></i></li>
+                    <li><i class="fas fa-map"></i></li>
+                </ul>
+            </div>
         </div>
-
     </main>
+<!--    Sidebar section    -->
+
+<!--    Default side menu   -->
+    <aside class="side-menu-default">
+        <div class="side-menu-default-header">
+            <a href="#" class="button-open">
+                <i class="fas fa-bars"></i>
+            </a>
+        </div>
+        <div class="side-menu-default-categories">
+            <ul class="menu-items">
+                <li><a href="#"><i class="fas fa-circle"></i></a></li>
+                <li><a href="#"><i class="fas fa-circle"></i></a></li>
+                <li><a href="#"><i class="fas fa-circle"></i></a></li>
+                <li><a href="#"><i class="fas fa-circle"></i></a></li>
+                <li><a href="#"><i class="fas fa-circle"></i></a></li>
+                <li><a href="#"><i class="fas fa-circle"></i></a></li>
+            </ul>
+        </div>
+    </aside>
+
+<!--    Active side menu when clicked   -->
+    <aside class="side-menu-active">
+        <div class="side-menu-header">
+            <a href="#" class="logo">
+                <img src="./images/image1.png" alt="Logo">
+            </a>
+            <a href="#" class="button-close">
+                <i class="fas fa-window-close"></i>
+            </a>
+        </div>
+        <div class="side-menu-categories">
+            <ul class="menu-items">
+                <li><a href="#">Link a</a></li>
+                <li><a href="#">Link b</a></li>
+                <li><a href="#">Link c</a></li>
+                <li><a href="#">Link d</a></li>
+                <li><a href="#">Link e</a></li>
+                <li><a href="#">Link f</a></li>
+            </ul>
+        </div>
+    </aside>
+
 </div>
 
-
+<script src="js/scripts.js"></script>
 </body>
 </html>
