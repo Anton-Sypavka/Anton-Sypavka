@@ -8,7 +8,17 @@
 .header-section {
     background-color: #ffffff;
     padding: 10px 35px 10px 130px;
+}
 
+.header-section::after {
+    content: ' ';
+    display: block;
+    width: 303px;
+    height: 20px;
+    background-color: #ffffff;
+    position: relative;
+    top: 45px;
+    border-radius: 10px;
 }
 
 .nav-bar {
